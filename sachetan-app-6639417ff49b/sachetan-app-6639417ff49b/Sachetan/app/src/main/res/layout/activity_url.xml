@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="localchat.sust.com.localchat.StartActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:gravity="center"
+            android:text="Sachetan Demo"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="Please specify the server IP address"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ip1"
+                android:layout_width="1dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_ip"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="." />
+
+            <EditText
+                android:id="@+id/ip2"
+                android:layout_width="1dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_ip"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="." />
+
+            <EditText
+                android:id="@+id/ip3"
+                android:layout_width="1dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_ip"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="." />
+
+            <EditText
+                android:id="@+id/ip4"
+                android:layout_width="1dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_ip"
+                android:gravity="center"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="Server port:"/>
+            <EditText
+                android:id="@+id/port"
+                android:layout_width="64dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_ip"
+                android:gravity="center"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errormessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/save_ip"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

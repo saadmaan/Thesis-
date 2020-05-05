@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/chkbx_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="News" />
+        <CheckBox
+            android:id="@+id/chkbx_posts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Posts:"
+            android:layout_weight="1"/>
+        <Spinner
+            android:id="@+id/spinner_incident_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:entries="@array/array_incident_type"
+            android:layout_weight="6"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="ac.sust.saimon.sachetan.activity.MapsActivity" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_newreport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="visible"
+            android:src="@drawable/ic_action_new" />
+        <ImageButton
+            android:id="@+id/imgbtn_clear_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_grey600"
+            android:layout_margin="16dp"
+            android:background="@color/white"
+            android:textAllCaps="false"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn_map_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:elevation="1dp"
+            android:src="@drawable/map_target"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:alpha="0.1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imgbtn_list_posts"
+            android:layout_width="wrap_content"
+            android:padding="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_format_list_bulleted_black_36dp"
+            android:textAllCaps="false" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_toggle_data"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_web_white_36dp"
+            android:textAllCaps="false" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_userposts"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_account_black_36dp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

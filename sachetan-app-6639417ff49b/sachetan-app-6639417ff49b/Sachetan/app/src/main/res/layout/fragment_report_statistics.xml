@@ -1,0 +1,129 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ac.sust.saimon.sachetan.fragment.ReportStatisticsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_dualbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/section.barchart.incident_type" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/section.barchart.frequency" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/section.barchart.avgseverity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_barchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="192dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_chart_labels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="16dp" />
+
+                    <ac.sust.saimon.sachetan.view.CustomHorizontalBarChart
+                        android:id="@+id/chart_frequency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ac.sust.saimon.sachetan.view.CustomHorizontalBarChart
+                        android:id="@+id/chart_avgseverity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_linechart"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart_hour_of_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_piechart"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chart_incident_percentage"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_month_incidents"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart_month_incidents"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

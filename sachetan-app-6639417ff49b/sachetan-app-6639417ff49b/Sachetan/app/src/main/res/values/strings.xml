@@ -1,0 +1,72 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="filler_text">Hello World!</string>
+
+    <!--SharedPreference Key values -->
+    <string name="preference_file_key">ac.sust.saimon.sachetan.SHAREDPREF</string>
+    <string name="sharedpref_baseurl">ac_sust_saimon_sachetan_sharedpref_baseurl</string>
+    <string name="sharedpref_token">ac_sust_saimon_sachetan_sharedpref_token</string>
+    <string name="sharedpref_create_timestamp">ac_sust_saimon_sachetan_sharedpref_crete_timestamp</string>
+    <string name="sharedpref_create_count">ac_sust_saimon_sachetan_sharedpref_create_count</string>
+
+    <string-array name="array_severity_label">
+        <item>1 - Notable</item>
+        <item>2 - Concerning</item>
+        <item>3 - Alarming</item>
+        <item>4 - Very serious</item>
+        <item>5 - Emergency</item>
+    </string-array>
+
+    <string-array name="array_incident_type">
+        <item>All</item>
+        <item>Accident</item>
+        <item>Hijacking</item>
+        <item>Mugging</item>
+        <item>Robbery</item>
+        <item>Theft</item>
+    </string-array>
+
+    <string name="app_name">Sachetan</string>
+    <string name="title_activity_maps">Sachetan</string>
+    <string name="title_activity_post">Report Incident</string>
+    <string name="title_activity_url">Demo URL</string>
+    <string name="title_activity_user_reports">My Reports</string>
+    <string name="title_activity_test_map">Map</string>
+    <string name="title.activity.report.new">Create a Report</string>
+    <string name="title.activity.user.self">My Account</string>
+    <string name="title.activity.sign_in">Sign In</string>
+    <string name="title.activity.sign_up">Create a New Account</string>
+    <string name="title.activity.report.single">View Report</string>
+    <string name="title.activity.report.area">Reports in this area</string>
+    <string name="title_activity_view_report">ViewReportActivity</string>
+    <string name="title_activity_area_reports">Reports in this Area</string>
+    <string name="title.progress.signin">Signing in</string>
+    <string name="title.progress.signup">Signing up</string>
+    <string name="title.progress.report.new">Posting Report</string>
+    <string name="title.progress.report.delete">Deleting Report</string>
+    <string name="prompt.signup.fill_up_fields">Please fill up all fields</string>
+    <string name="prompt.signup.password_mismatch">Passwords do not match</string>
+    <string name="prompt.report.limit_exceeded">You have reached your limit (5 reports every hour). Please try again later.</string>
+    <string name="message.progress.all">Please wait...</string>
+    <string name="message.progress.connecting">Connecting...</string>
+    <string name="message.error.unsupported">Not supported yet</string>
+    <string name="message.error.location">Couldn\'t retrieve location</string>
+    <string name="message.error.credentials">Incorrect username or password</string>
+    <string name="message.error.server">Error: unknown server response</string>
+    <string name="message.error.network">Error: could not connect to server, please try again later</string>
+    <string name="message.error.unauthorized">Error: you are not authorized to perform this operation</string>
+    <string name="message.error.report.limit">You have exceeded your report limit (3 reports every hour). Please try again later. </string>
+    <string name="message.view.type.news">Showing Newspaper Activity: </string>
+    <string name="message.loading">Loading...</string>
+    <string name="message.view.type.reports">Showing Reports: </string>
+    <string name="message.response.empty">Nothing to show</string>
+    <string name="message.success.report.new">Your report has been posted!</string>
+    <string name="message.success.signup">Signed up!</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="section.barchart.frequency">Count</string>
+    <string name="section.barchart.avgseverity">Avg. Severity</string>
+    <string name="section.barchart.incident_type">Incident Type</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
